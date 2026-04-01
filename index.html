@@ -1,58 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>◉ VHS PORTFOLIO ◉</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&family=VT323&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional web developer portfolio – career transition from retail to modern web development.">
+    <meta name="keywords" content="web developer, career change, retail to tech, portfolio, frontend, responsive design">
+    <meta name="author" content="Justin Cartwright">
+    <title>Justin Cartwright | Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root { --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    </style>
 </head>
-<body>
+<body class="dark">
+    <!-- NAVBAR -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Justin Cartwright</span>
+                <span class="logo-tag">WEB DEVELOPER</span>
+            </div>
 
-  <!-- Fixed Navbar -->
-  <nav id="navbar">
-    <a href="#welcome-section">HOME</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#contact">CONTACT</a>
-  </nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+                <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
 
-  <!-- Welcome Section -->
-  <section id="welcome-section">
-    <h1 class="glitch" data-text="RETRODEV">RETRODEV</h1>
-    <p>Full-Stack Developer // Pixel Hunter // VHS Enthusiast</p>
-    <a id="profile-link" href="https://github.com/yourusername" target="_blank">GitHub ►</a>
-  </section>
+            <div class="nav-controls">
+                <div class="search-wrapper">
+                    <input type="text" id="global-search" placeholder="Search projects..." aria-label="Search portfolio projects" onkeyup="if(event.key==='Enter') filterProjects()">
+                    <button onclick="filterProjects()" aria-label="Search" class="search-btn">🔎</button>
+                </div>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2 class="glitch" data-text="PROJECTS">PROJECTS</h2>
-    <div class="projects-grid">
-      
-      <div class="project-tile">
-        <a href="https://yourproject1.com" target="_blank">
-          <img src="https://via.placeholder.com/400x200/111/00ffff?text=PROJECT+01" alt="Project 1">
-          <p>Neon Dashboard</p>
-        </a>
-      </div>
+                <button id="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" class="theme-toggle">
+                    <span class="sun" style="display: none;">☀️</span>
+                    <span class="moon">🌙</span>
+                </button>
 
-      <div class="project-tile">
-        <a href="https://yourproject2.com" target="_blank">
-          <img src="https://via.placeholder.com/400x200/111/ff00ff?text=PROJECT+02" alt="Project 2">
-          <p>Synthwave Game</p>
-        </a>
-      </div>
+                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-      <div class="project-tile">
-        <a href="https://yourproject3.com" target="_blank">
-          <img src="https://via.placeholder.com/400x200/111/00ffff?text=PROJECT+03" alt="Project 3">
-          <p>VHS Portfolio (this!)</p>
-        </a>
-      </div>
+    <!-- HERO SECTION -->
+    <header id="hero" class="hero">
+        <div class="hero-card">
+            <div class="hero-content">
+                <h1 class="hero-name">Justin Cartwright</h1>
+                <p class="hero-title">Web Developer (Retail → Tech Transition)</p>
+                <p class="hero-subtitle">From the retail floor to pixel-perfect code. Fast learner building clean, responsive web experiences.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="cta-button primary">Explore My Projects</a>
+                    <a href="#experience" class="cta-button secondary">My Career Transition</a>
+                    <a href="#contact" class="cta-button tertiary">Let's Connect</a>
+                </div>
+                <p class="hero-trust">Actively building my web development portfolio and open to junior roles or freelance opportunities.</p>
+            </div>
+        </div>
+    </header>
 
-      <!-- Add more tiles here -->
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="section-container">
+            <h2 class="section-title">About</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Small-town Alaskan, now happily rooted in the Great Northwest. I grew up in a close-knit Alaskan community where the hills rolled straight into the sea, and that wild spirit never left me. These days you’ll find me enjoying the rain and watching the birds. The outdoors isn’t a hobby here—it’s home.</p>
+                    <p>When I’m not outside, I’m fully dialed into the world wide web. I love the way the internet lets me chase ideas, connect with folks from every corner of the globe, tinker with tech, and bring the wider world right into my little slice of the Pacific Northwest.
+It’s the best of both realities: crisp mountain air by day and endless digital horizons by night. Rugged roots, curious mind, and always up for a good story—online or off.</p>
+                </div>
+                <div class="about-meta">
+                    <div class="meta-item">
+                        <strong>Based in</strong><br>Port Orchard, WA
+                    </div>
+                    <div class="meta-item">
+                        <strong>Transitioning since</strong><br>2025
+                    </div>
+                    <div class="meta-item">
+                        <strong>Current focus</strong><br>Frontend &amp; responsive web apps
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section bg-light">
+        <div class="section-container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">HTML5</div>
+                <div class="skill-tag">CSS3</div>
+                <div class="skill-tag">JavaScript (ES6+)</div>
+                <div class="skill-tag">Responsive Design</div>
+                <div class="skill-tag">React</div>
+                <div class="skill-tag">Next.js</div>
+                <div class="skill-tag">Tailwind CSS</div>
+                <div class="skill-tag">TypeScript</div>
+                <div class="skill-tag">Accessibility (WCAG)</div>
+                <div class="skill-tag">SEO Optimization</div>
+                <div class="skill-tag">Git &amp; Version Control</div>
+                <div class="skill-tag">Problem Solving</div>
+                <div class="skill-tag">Customer-First Mindset</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+<section id="projects" class="section">
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">Personal projects built during my transition into web development.</p>
+        </div>
+        
+        <div class="projects-grid" id="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" data-title="Nexus Neural – Futuristic Neural-Tech E-Commerce Platform" data-desc="Enterprise dashboard with real-time analytics">
+                <div class="project-card-inner">
+                    <img src="e-commerce-page.png" 
+                         alt="Nexus Neural – Futuristic Neural-Tech E-Commerce Platform" 
+                         class="project-image"
+                         loading="lazy">
+                    <h3>Nexus Neural – Futuristic Neural-Tech E-Commerce Platform</h3>
+                    <p>Built a fully functional, single-file e-commerce platform for a futuristic neural-tech brand. Features include real-time inventory management, cart/checkout flow, admin CRUD dashboard, and persistent state — all in pure HTML/CSS/JS. Delivered premium cyberpunk UI with Tailwind and smooth animations, proving I can ship polished, interactive web products at startup velocity.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span>
+                        <span>Recharts</span>
+                        <span>Supabase</span>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-title="Interactive Balance Sheet Dashboard" data-desc="Interactive balance sheet web application">
+                <div class="project-card-inner">
+                    <img src="interactive-balance-sheet.png" 
+                         alt="Interactive Balance Sheet Dashboard" 
+                         class="project-image"
+                         loading="lazy">
+                    <h3>Interactive Balance Sheet Dashboard</h3>
+                    <p>A fully functional, single-file interactive balance sheet web application that lets users manage assets, liabilities, and net worth across multiple years. Built as a self-contained demo to showcase modern frontend development, real-time data manipulation, dynamic visualizations, and delightful UX patterns.
+Perfect for portfolios because it demonstrates end-to-end ownership of a complex interactive application in just one HTML file — no build tools, no frameworks, pure vanilla JavaScript + modern web standards.</p>
+                    <div class="project-tags">
+                        <span>Shopify Hydrogen</span>
+                        <span>Sanity CMS</span>
+                        <span>Stripe</span>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </section>
+</section>
 
-  <script src="script.js"></script>
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section bg-light">
+        <div class="section-container">
+            <h2 class="section-title">Experience &amp; Career Transition</h2>
+            <p class="section-description" style="margin-bottom: 3rem;">From retail leadership to modern web development. I’m bringing the same discipline, customer focus, and fast-learning mindset that made me successful in retail — now applied to building digital experiences.</p>
+            
+            <div class="timeline">
+                <!-- New web development focus -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 — Present</div>
+                    <div class="timeline-content">
+                        <h4>Self-Taught Web Developer • Independent Projects &amp; Portfolio Building</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Actively learning and building production-ready web applications. Completed personal projects in React, Next.js, and Tailwind while maintaining full-time retail work. Demonstrated ability to learn complex technologies quickly and deliver polished results.</p>
+                    </div>
+                </div>
+                
+                <!-- Retail experience with transferable skills -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 — 2024</div>
+                    <div class="timeline-content">
+                        <h4>Retail Supervisor • [Your Retail Company]</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Led a team of 12 in a fast-paced environment, improving customer satisfaction scores by X% and streamlining daily operations. Developed strong problem-solving, communication, and project management skills that directly translate to agile web development workflows.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018 — 2021</div>
+                    <div class="timeline-content">
+                        <h4>Sales Associate / Team Lead • [Previous Retail Company]</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Managed high-volume customer interactions and inventory systems while training new team members. Honed attention to detail, adaptability under pressure, and user-experience thinking — skills I now use daily when building intuitive web interfaces.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 1.5rem; background: var(--card-bg); border-radius: 12px; border-left: 5px solid var(--accent);">
+                <strong>Recent Certifications</strong><br>
+                Completed the <strong>Responsive Web Design</strong> and <strong>JavaScript Algorithms and Data Structures</strong> certifications on <strong>freeCodeCamp.org</strong> (2025). Built multiple responsive projects using HTML, CSS, and vanilla JavaScript. 
+                <br><br>
+Open to junior web developer roles, apprenticeships, or freelance opportunities to accelerate my transition into the industry.
+            </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-description">Ready to start a project or discuss how my retail-honed skills can add value to your team? Send me a message. I typically respond within 24 hours.</p>
+            
+            <form id="contact-form" class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="you@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Tell me about your project or how I can help..."></textarea>
+                </div>
+                <button type="submit" class="cta-button primary form-submit">Send Message</button>
+            </form>
+
+            <div class="alternative-contact">
+                <a href="mailto:justinwebwright@gmail.com" class="alt-link">justinwebwright@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; <span id="year"></span> Justin Cartwright. All rights reserved.</p>
+        <p class="footer-note">Handcrafted in Port Orchard, WA • Alaskan roots, Pacific Northwest home • From retail floors to responsive digital experiences</p>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
