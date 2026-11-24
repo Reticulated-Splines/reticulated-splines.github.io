@@ -59,13 +59,13 @@ orderBtn.addEventListener('click', () => {
     msg.className = 'order-msg';
     orderBtn.parentElement.after(msg);
   }
-msg.textContent = 'Thanks! ' + qty + ' Synapse Veil reserved for $' + total + '. (Demo only, no payment taken.)';
+  msg.textContent = 'Thanks! ' + qty + ' Synapse Veil reserved for $' + total + '. (Demo only, no payment taken.)';
 
-// Briefly change the button, then put it back
-orderBtn.textContent = 'Pre-Ordered ✓';
-orderBtn.disabled = true;
-setTimeout(() => {
-  orderBtn.disabled = false;
-  updateTotal();
+  // Briefly change the button, then put it back
+  orderBtn.textContent = 'Pre-Ordered ✓';
+  orderBtn.disabled = true;
+  setTimeout(() => {
+    orderBtn.disabled = false;
+    updateTotal();
   }, 2500);
 });
