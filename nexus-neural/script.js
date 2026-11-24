@@ -45,4 +45,27 @@ thumbnails.forEach((thumb) => {
     thumbnails.forEach((t) => t.classList.remove('active'));
     thumb.classList.add('active');
   });
+
+  // Pre-order confirmation
+  orderBtn.addEventListener('click', () => {
+    const qty = Number(qtyInput.value);
+    const total = (qty * price).toLocalString();
+  });
+
+    // Show a message under the button
+    let msg = document.querySelector('.order-msg');
+    if (!msg) {
+      msg = document.createElement('p');
+      msg.className = 'order0msg0;
+      orderBtn.parentElement.after(msg);
+    }
+    msg.textContent = 'Thanks! ' + qty + ' Synapse Veil reserved for $' + total + '. (Demo only, no payment taken.)';
+
+    // Briefly change the button, then put it back
+    orderBtn.textContent = 'Pre-Ordered ✓';
+    orderBtn.disabled = true;
+    setTimeout(() => {
+      orderBtn.disabled = false;
+      updateTotal();
+    }, 2500);
 });
