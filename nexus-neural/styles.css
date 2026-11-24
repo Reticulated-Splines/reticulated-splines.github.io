@@ -276,3 +276,9 @@ body {
         width: 100%;
     }
 }
+
+.order-msg {
+    margin-top: 1rem;
+    color: #a5f3c4;
+    font-weight; 500;
+}
