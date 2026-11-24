@@ -1,13 +1,14 @@
 // Grab the pieces of the page we need
-const button = document.querySelectorAll('.qty-btn');
+const buttons = document.querySelectorAll('.qty-btn');
 const minusBtn = buttons[0];
 const plusBtn = buttons[1];
 const qtyInput = document.querySelector('.quantity input');
 const orderBtn = document.querySelector('.add-to-cart');
-const price = 799:
+const price = 799;
 
-// Update the Pre-Order button to show the total function updateTotal() {
-  const qty + Number(qtyInput.value);
+// Update the Pre-Order button to show the total 
+function updateTotal() {
+  const qty = Number(qtyInput.value);
   const total = (qty * price).toLocaleString();
   orderBtn.textContent = 'Pre-Order Now - $' + total;
 }
