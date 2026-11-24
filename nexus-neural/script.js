@@ -50,14 +50,13 @@ thumbnails.forEach((thumb) => {
   // Pre-order confirmation
   orderBtn.addEventListener('click', () => {
     const qty = Number(qtyInput.value);
-    const total = (qty * price).toLocalString();
-  });
+    const total = (qty * price).toLocaleString();
 
     // Show a message under the button
     let msg = document.querySelector('.order-msg');
     if (!msg) {
       msg = document.createElement('p');
-      msg.className = 'order0msg0;
+      msg.className = 'order-msg';
       orderBtn.parentElement.after(msg);
     }
     msg.textContent = 'Thanks! ' + qty + ' Synapse Veil reserved for $' + total + '. (Demo only, no payment taken.)';
