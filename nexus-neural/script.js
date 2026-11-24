@@ -40,11 +40,12 @@ thumbnails.forEach((thumb) => {
     // Use the same photo, but the large version
     mainImage.src = thumb.src.replace('w=300', 'w=1200');
     mainImage.alt = thumb.alt;
-
+    
     // Move the highlight to the clicked thumbnail
     thumbnails.forEach((t) => t.classList.remove('active'));
     thumb.classList.add('active');
   });
+});
 
   // Pre-order confirmation
   orderBtn.addEventListener('click', () => {
