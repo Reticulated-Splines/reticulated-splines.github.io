@@ -11,7 +11,7 @@
         <h1>Blue Heron Landscapes</h1>
         <p>Reliable lawn care and landscaping for South Kitsap homes.</p>
         <a href="tel:+15555550123">Call Now</a>
-        <a href="#quote">Get a free Quote</a>
+        <a href="#quote">Get a Free Quote</a>
     </header>
     <!-- SERVICES -->
     <section id="services">
@@ -50,10 +50,10 @@
         <h2>What Customers Say</h2>
         <blockquote>
             <p>"They started weekly mowing in April and the lawn has looked sharp all season. Edges are always clean and they don't leave clippings in the driveway."</p>
-            <cite>- Mark, Port Orchard (sample)"</cite>
+            <cite>- Mark, Port Orchard (sample)</cite>
         </blockquote>
         <blockquote>
-            <p>"After the big windstorm they cleaned up the fallen branches and overgrowth in two days. The spring cleanup after that made the beds and lawn look like a different yard."
+            <p>"After the big windstorm they cleaned up the fallen branches and overgrowth in two days. The spring cleanup after that made the beds and lawn look like a different yard."</p>
             <cite>- Jennifer L., Bremerton (sample)</cite>
         </blockquote>
         <blockquote>
@@ -75,14 +75,33 @@
     <!-- QUOTE FORM -->
     <section id="quote">
         <h2>Get a Free Quote</h2>
-        <form action=""YOUR-ENDPOINT" method=""POST">
+        <form action="https://formspree.io/f/mkjrykra" method="POST">
             <label for="name">Name:</label>
-            <input type=""text" id=""name" name=""name" required>
+            <input type="text" id="name" name="name" required>
+
             <label for="email">Email:</label>
-            <input type=""email" id=""email" name=""email" required>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="town">Town:</label>
+            <input type="text" id="town" name="town" required>
+
+            <label for="service">Service Needed:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option>Lawn Mowing & Maintenance</option>
+                <option>Seasonal Cleanups</option>
+                <option>Hardscaping</option>
+                <option>Mulch & Garden Bed Design</option>
+                <option>Pruning & Shrub Care</option>
+                <option>Irrigation & Drainage Help</option>
+            </select>
+
             <label for="message">Tell us about your yard care needs:</label>
-            <textarea id=""message" name=""message" rows=""4" required></textarea>
-            <button type=""submit">Request My Free Quote</button>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Request My Free Quote</button>
         </form>
     </section>
     <!-- FOOTER -->
