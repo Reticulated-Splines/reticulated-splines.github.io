@@ -49,15 +49,15 @@
     <section id="reviews">
         <h2>What Customers Say</h2>
         <blockquote>
-            <p>"“They started weekly mowing in April and the lawn has looked sharp all season. Edges are always clean and they don’t leave clippings in the driveway.”</p>
+            <p>"They started weekly mowing in April and the lawn has looked sharp all season. Edges are always clean and they don't leave clippings in the driveway."</p>
             <cite>- Mark, Port Orchard (sample)"</cite>
         </blockquote>
         <blockquote>
-            <p>"“After the big windstorm they cleaned up the fallen branches and overgrowth in two days. The spring cleanup after that made the beds and lawn look like a different yard.”"</p>
+            <p>"After the big windstorm they cleaned up the fallen branches and overgrowth in two days. The spring cleanup after that made the beds and lawn look like a different yard."
             <cite>- Jennifer L., Bremerton (sample)</cite>
         </blockquote>
         <blockquote>
-            <p>"“We had them put in a small stone patio and walkway. It was finished on time, the drainage works, and the price was exactly what they quoted.”"</p>
+            <p>"We had them put in a small stone patio and walkway. It was finished on time, the drainage works, and the price was exactly what they quoted."</p>
             <cite>- David S., Gig Harbor (sample)</cite>
         </blockquote>
     </section>
@@ -70,10 +70,20 @@
             <li>Gig Harbor</li>
             <li>Silverdale</li>
         </ul>
+        <p>Not sure if we cover your street? Ask in the quote form.</p>
     </section>
     <!-- QUOTE FORM -->
     <section id="quote">
         <h2>Get a Free Quote</h2>
+        <form action=""YOUR-ENDPOINT" method=""POST">
+            <label for="name">Name:</label>
+            <input type=""text" id=""name" name=""name" required>
+            <label for="email">Email:</label>
+            <input type=""email" id=""email" name=""email" required>
+            <label for="message">Tell us about your yard care needs:</label>
+            <textarea id=""message" name=""message" rows=""4" required></textarea>
+            <button type=""submit">Request My Free Quote</button>
+        </form>
     </section>
     <!-- FOOTER -->
     <footer>Demo site built by Justin Cartwright - fictional business.</footer>
