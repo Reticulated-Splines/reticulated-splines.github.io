@@ -1,0 +1,26 @@
+:root {
+    --green: #2f5d3a;
+    --green-light: #e8f0ea;
+    --text: #222;
+    --white: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
